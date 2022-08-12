@@ -13,3 +13,9 @@ export const ROUTES = [
     name: 'Product'
   }
 ]
+
+export interface Products {
+  id: number;
+  name: string;
+  cost: number;
+}
