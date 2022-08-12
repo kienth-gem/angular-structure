@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PRODUCTS} from "@core/services/mock-products";
+import {Products} from "@constants/common";
+import {ProductService} from "@core/services/product.service";
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,15 @@ import {PRODUCTS} from "@core/services/mock-products";
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  products = PRODUCTS
+  products: Products[] = []
 
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts(): void {
+    this.products = this.productService.getProducts()
+  }
 }
