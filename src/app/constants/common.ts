@@ -1,6 +1,7 @@
 export const ROUTER_PATH = {
   DASHBOARD: 'dashboard',
-  PRODUCT: 'product'
+  PRODUCT: 'product',
+  LOGIN: 'login'
 }
 
 export const ROUTES = [

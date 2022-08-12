@@ -6,4 +6,5 @@
   />
   <span>Welcome</span>
   <a *ngFor="let route of routesArray" [routerLink]="[route.link]" [routerLinkActive]="['is-active']" class="nav-link">{{route.name}}</a>
+  <button nz-button nzType="primary" class="log-out-button" (click)="onClickLogOut()">Log out</button>
 </div>
